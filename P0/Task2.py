@@ -23,6 +23,7 @@ phone_dict = {}
 for call in calls:
 	if(call[2][3:10] == '09-2016'):
 		phone_dict[str(call[0])] = phone_dict.get(str(call[0]), 0) + int(call[-1])
+		phone_dict[str(call[1])] = phone_dict.get(str(call[1]), 0) + int(call[-1])
 
 sorted_phone_dict = sorted(phone_dict.items(), key=lambda kv:kv[1], reverse=True)
 print('{} spent the longest time, {} seconds, on the phone during September 2016.'.\

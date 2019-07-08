@@ -29,22 +29,27 @@ outgoing_calls = []
 for call in calls:
 	incoming_calls.append(call[1])
 	outgoing_calls.append(call[0])
-incoming_calls = list(set(incoming_calls))
-outgoing_calls = list(set(outgoing_calls))
+incoming_calls = set(incoming_calls)
+outgoing_calls = set(outgoing_calls)
 
 incoming_texts = []
 outgoing_texts = []
 for text in texts:
 	incoming_texts.append(text[1])
 	outgoing_texts.append(text[0])
-incoming_texts = list(set(incoming_texts))
-outgoing_texts = list(set(outgoing_texts))
-
+incoming_texts = set(incoming_texts)
+outgoing_texts = set(outgoing_texts)
+'''
+for O(n^2) complexity, better solution is using sets
 telemarketers_list = [] 
 for call in outgoing_calls:
 	if((call not in incoming_calls) and (call not in incoming_texts) and (call not in outgoing_texts)):
 		telemarketers_list.append(call)
-		
+telemarketers_list = sorted(telemarketers_list)
+'''
+not_in_sets = incoming_calls.union(incoming_texts, outgoing_texts)
+telemarketers_list = list(outgoing_calls - not_in_sets)
+
 telemarketers_list = sorted(telemarketers_list)
 print('These numbers could be telemarketers:')
 for telemarketer in telemarketers_list:

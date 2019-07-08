@@ -64,10 +64,13 @@ for area_code in area_codes:
 	print(area_code)
 
 ### PART B
-counter_fix = 0
+counter_fix_b_b = 0
+counter_fix_b = 0
 for call in calls:
-	if(call[0][1:4] == '080' and call[1][1:4] == '080'):
-		counter_fix += 1
+	if(call[0][1:4] == '080'):
+		counter_fix_b += 1
+		if(call[1][1:4] == '080'):
+			counter_fix_b_b += 1
 
 print('{0:.2f} percent of calls from fixed lines in Bangalore are calls \
-to other fixed lines in Bangalore.'.format(counter_fix * 100 / len(calls)))
+to other fixed lines in Bangalore.'.format(counter_fix_b_b * 100 / counter_fix_b))
