@@ -15,4 +15,4 @@
 3 for loops each O(n), 1 sorted O(n log n) => since records are more than 20 then is worse O(n log n)
 
 ### Task4
-3 for loops each O(n), 1 for loop with 3 conditional inner search 3*O(n^2), 1 sorted O(n log n) => O(n^2)
+3 for loops each O(n), 4 set O(n) worse, 1 for loop with 3 conditional inner search 3*O(n^2), 1 sorted O(n log n) => O(n^2)
