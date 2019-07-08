@@ -1,0 +1,18 @@
+
+### Below is only for solutions not the csv.reader() section
+### constant value multiplication is not counted in as final complexity
+
+### Task0
+7 entry printed, each O(1) since the index is clear , 7* O(1) => O(1)
+
+### Task1
+2 for loops each O(n); set O(n) worse case =>  3*O(n) => O(n)
+
+### Task2
+1 for loop each O(n), 1 set O(n) worse and 1 sorted O(n log n)  => since records are more than 20 then is worse O(n log n)
+
+### Task3
+3 for loops each O(n), 1 sorted O(n log n) => since records are more than 20 then is worse O(n log n)
+
+### Task4
+3 for loops each O(n), 1 for loop with 3 conditional inner search 3*O(n^2), 1 sorted O(n log n) => O(n^2)
