@@ -39,7 +39,7 @@ def max_pairwise_product_opti2(numbers):
 if __name__ == '__main__':
     #input_n = int(input())
     #input_numbers = [int(x) for x in input().split()]
-    input_n = 100
+    input_n = 10000
     input_numbers = [random.randint(0, 1000) for x in range(input_n)]
     print(input_numbers)
     start = time.time()
