@@ -23,7 +23,7 @@ if __name__ == '__main__':
 	x, y = tuple(map(int, input('input two numbers with space: ').split()))
 	print(x,  y)
 	if x >= y:
-		print(gcd(x, y))
+		print(gcd(x, y)) # can also use (max(x, y), min(x, y)
 	else:
 		print(gcd(y, x))
 
